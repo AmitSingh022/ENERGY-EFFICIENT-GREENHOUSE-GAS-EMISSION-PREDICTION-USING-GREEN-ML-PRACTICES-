@@ -40,30 +40,34 @@ The goal is to select a model that balances **performance and sustainability**.
 # ---------------- MODEL METRICS ----------------
 st.subheader("Model Performance")
 
-st.markdown("### Mean Squared Error (MSE)")
-st.write("**Linear Regression MSE:** 7.881378487088032e-08")
-st.write("**Random Forest MSE:** 3.774614594666317e-05")
-st.write("**ANN Evaluation Loss:** [0.3172013461589813, 0.2840009033679962]")
+st.markdown("### Mean Squared Error (RMSE)")
+st.write("**Linear Regression RMSE:** 0.000280")
+st.write("**Random Forest RMSE:** 0.00614")
+st.write("**Tuned Random Forest RMSE:** 0.0059")
+st.write("**ANN RMSE:** 0.0012")
 
 st.markdown("### 🌍 CO₂ Emissions")
-st.write("**Linear Regression CO₂ Emissions:** 0.00000339 kg")
-st.write("**Random Forest CO₂ Emissions:** 0.00000409 kg")
-st.write("**ANN CO₂ Emissions:** 0.00039461 kg")
+st.write("**Linear Regression CO₂ Emissions:** 0.00000351 kg")
+st.write("**Random Forest CO₂ Emissions:** 0.00000414 kg")
+st.write("**Tuned Random Forest CO₂ Emissions:** 0.00009304 kg")
+st.write("**ANN CO₂ Emissions:** 0.00013170 kg")
 
 # ---------------- COMPARISON TABLE ----------------
 st.subheader("Comparison Table")
 
 data = {
-    "Model": ["Linear Regression", "Random Forest", "ANN"],
-    "MSE / Loss": [
-        "7.88e-08",
-        "3.77e-05",
-        "0.06432888866259334"
+    "Model": ["Linear Regression", "Random Forest","Tuned Random Forest", "ANN"],
+    "RMSE / Loss": [
+        "0.000280",
+        "0.00614",
+        "0.0059",
+        "0.0012"
     ],
     "CO₂ Emissions (kg)": [
-        "0.00000339",
-        "0.00000409",
-        "0.00011401"
+        "0.00000351",
+        "0.00000414",
+        "0.00009304",
+        "0.00013170"
     ]
 }
 
